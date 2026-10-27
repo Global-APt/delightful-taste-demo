@@ -91,6 +91,20 @@ img{max-width:100%}
 @media(max-width:700px){header{gap:12px}.nav{gap:4px}.nav button{font-size:14px;white-space:normal}.food-photo{object-fit:cover}#staff .pos-cart-panel{top:auto}.tools input,.tools select{max-width:100%;min-width:0}}
 @media(max-width:390px){.nav button{padding:8px;font-size:13px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.food-info h3{overflow-wrap:anywhere}.basket-float{max-width:calc(100vw - 24px)}}
 
+
+/* Mobile navigation: clear 3-by-2 layout for phones */
+@media(max-width:700px){
+ header{display:grid;grid-template-columns:1fr;gap:12px;padding:12px 4vw 10px;align-items:stretch}
+ .brand{min-width:0}
+ .nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%;overflow:visible}
+ .nav button{min-width:0;width:100%;min-height:42px;padding:9px 5px;border-radius:10px;font-size:12px;line-height:1.2;text-align:center;white-space:normal;overflow-wrap:anywhere;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09)}
+ .nav button.active{background:linear-gradient(135deg,var(--orange),var(--orange-deep));border-color:transparent}
+}
+@media(max-width:360px){
+ .nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .nav button{font-size:13px;min-height:40px;padding:9px 8px}
+}
+
 </style>
 </head>
 <body>
